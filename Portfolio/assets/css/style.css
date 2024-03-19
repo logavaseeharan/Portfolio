@@ -1880,11 +1880,26 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+.showChild{
+  cursor:pointer;
+}
 .showChild p {
+  cursor: pointer;
   display: none; /* Hide paragraphs by default */
 }
 
 .showChild:hover p {
   cursor: pointer;
-  display: block; /* Show paragraphs when the parent is hovered over */
+  display: block;
+  animation:glide 1s ease-in-out; /* Show paragraphs when the parent is hovered over */
+}
+@keyframes glide {
+  from{
+    opacity:0;
+    display:none;
+  }
+  to{
+    opacity: 1;
+    display:block;
+  }
 }
